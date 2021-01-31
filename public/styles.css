@@ -1,0 +1,446 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.task-title {
+  position: relative;
+  width: 450px;
+  height: 80px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+.task-title input,
+.task-title textarea {
+  width: 90%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+
+.pending-completed {
+  top: 0px;
+}
+#bottom-left {
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -2;
+}
+
+#top-right {
+  right: 0;
+  top: 0;
+  position: absolute;
+  z-index: -2;
+}
+
+.headings {
+  /* Pending */
+  position: relative;
+  width: 64px;
+  height: 24px;
+  left: 465px;
+  top: 88px;
+
+  font-family: "Open Sans", sans-serif;
+  /* font-family: Avenir; */
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.364px;
+
+  /* Content / Primary */
+  color: #1f1f1f;
+}
+
+.inactive-headings {
+  /* Completed */
+  position: relative;
+  width: 87px;
+  height: 24px;
+  left: 543px;
+  top: 55px;
+
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.364px;
+
+  /* Content / Tertiary */
+  color: #afafaf;
+}
+
+.main-card {
+  position: absolute;
+  width: 530px;
+  height: 700px;
+  left: 465px;
+  top: 160px;
+  overflow-y: scroll;
+  right: -20px;
+  background: #ffffff;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
+}
+
+.task-open {
+  position: relative;
+  height: 108px;
+  width: 478px;
+  left: 16px;
+  right: 16px;
+  top: 16px;
+  margin-bottom: 16px;
+
+  /* Border / Transparent */
+  border: 1px solid rgba(31, 31, 31, 0.08);
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  /* position: relative;
+  height: 108px;
+  left: 16px;
+  right: 16px;
+  top: 16px;
+
+  border: 1px solid rgba(31, 31, 31, 0.08);
+  box-sizing: border-box;
+  border-radius: 8px; */
+}
+
+.date-block {
+  /* Date view */
+  position: absolute;
+  width: 282px;
+  height: 160px;
+  left: 1039px;
+  top: 128px;
+
+  background: #ffffff;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
+}
+
+.task-count {
+  /* Task total view */
+
+  position: absolute;
+  width: 147px;
+  height: 160px;
+  left: 1039px;
+  top: 320px;
+
+  background: #ffffff;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
+}
+
+.container-checkbox {
+  /* position: relative;
+  height: 24px;
+  left: 0px;
+  top: 10px;
+
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px; */
+  /* identical to box height, or 150% */
+  /* display: flex;
+  align-items: center;
+  letter-spacing: 0.364px; */
+
+  /* Content / Primary */
+  /* color: #1f1f1f;
+  padding-left: 65px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; */
+}
+
+input[type="checkbox"] {
+  /* display: none; */
+}
+
+.checkbox-priority {
+  position: relative;
+  text-align: left;
+  left: 10px;
+}
+
+.priority-button-high {
+  position: absolute;
+  top: 70px;
+  right: 10px;
+}
+.priority-button-medium {
+  position: absolute;
+  top: 70px;
+  right: 80px;
+}
+.priority-button-low {
+  position: absolute;
+  top: 70px;
+  right: 167px;
+}
+.priority-align {
+  display: inline;
+}
+#checkbox-priority {
+  /* Checkbox - Unchecked */
+  /* display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  left: 16px;
+  top: 16px; */
+  /* Vector */
+  /* left: -25%;
+  top: 10.5%; */
+
+  /* All / orange300 */
+  /* border-color: 1.7px solid #fb8333; */
+}
+
+.current-day {
+  /* Wednesday */
+  position: relative;
+  width: 150px;
+  height: 28px;
+  left: 16px;
+  top: 0px;
+
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 28px;
+  /* identical to box height, or 100% */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.266341px;
+
+  /* Content / Secondary */
+  color: #545454;
+}
+
+.current-month {
+  /* November, 21 */
+
+  position: absolute;
+  width: 234px;
+  height: 36px;
+  left: 20px;
+  top: 20px;
+
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  /* identical to box height, or 100% */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.266341px;
+
+  /* Content / Primary */
+  color: #1f1f1f;
+}
+
+.current-year {
+  /* 2020 */
+
+  position: absolute;
+  width: 64px;
+  height: 28px;
+  left: 16px;
+  top: 70px;
+
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 28px;
+  /* identical to box height, or 100% */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.266341px;
+
+  /* Content / Tertiary */
+  color: #afafaf;
+}
+
+.count {
+  /* 8 */
+  position: absolute;
+  width: 38px;
+  height: 57px;
+  right: 54px;
+  top: -35px;
+
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 64px;
+  /* or 100% */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.364px;
+
+  /* All / blue400 */
+  color: #265a88;
+}
+
+.count-label {
+  /* Frame 5 */
+  position: absolute;
+  width: 83px;
+  height: 32px;
+  right: 32px;
+  top: 94px;
+
+  /* All / gray50 */
+  background: #f6f6f6;
+  border-radius: 8px;
+}
+
+.count-label-text {
+  /* Tasks */
+  position: absolute;
+  width: 45px;
+  height: 24px;
+  left: calc(50% - 45px / 2);
+  top: calc(-45%);
+
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 133% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.364px;
+
+  /* Content / Primary */
+  color: #1f1f1f;
+}
+
+.task-font {
+  /* Task 1 */
+
+  position: relative;
+  height: 24px;
+  left: -30px;
+  top: 16px;
+
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.364px;
+
+  /* Content / Primary */
+  color: #1f1f1f;
+}
+
+.cancel-button {
+  /* Oval */
+
+  position: relative;
+  width: 16px;
+  height: 16px;
+  right: -320px;
+  top: -30px;
+
+  /* All / red50 */
+  background: #ffd7d5;
+  border-radius: 8px;
+}
+
+.cancel-button:hover {
+  background-color: #fbf1ef;
+}
+
+.due-date {
+  /* Label */
+
+  position: absolute;
+  width: 90px;
+  height: 20px;
+  right: 40px;
+  top: -2px;
+
+  /* Paragraph / X Small (12\20) */
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  /* identical to box height, or 167% */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.364px;
+
+  /* Content / Tertiary */
+  color: #afafaf;
+}
+
+.calendar-circle {
+  /* Ellipse */
+
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 10px;
+  top: 10px;
+  border-radius: 12px;
+  /* All / gray50 */
+  background: #f6f6f6;
+  /* Foundation / primaryA */
+  border: 1px solid #1f1f1f;
+  box-sizing: border-box;
+}
+
+.new-task-button button {
+  position: absolute;
+  width: 147px;
+  height: 160px;
+  left: 1039px;
+  top: 820px;
+  background-color: #ff6159;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
